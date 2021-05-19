@@ -29,6 +29,15 @@
     ~~~
     # git commit -m "<commit_name>" <file_name>
     ~~~
+    
+    i) without email and username we can't commit the file/s so, we have to set email and username globally
+    
+    git config --list
+    
+    git config --global user.email "email-id"
+    git config --global user.name "username"
+    
+    git config --global --unset user.email "email-id"
 
 6. If you want to commit all files to local repository
     ~~~
@@ -91,9 +100,9 @@
     Note: We can get back first commit also but need repository default files commit Id
     ~~~
 
-15. discard the latest commit perminately ?
+15. discard the latest commit perminately including commit files ?
     ~~~
-    # git reset --hard HEAD^
+    # git reset --hard HEAD^  ---> it'll delete the latest commit and it's files permenently.
 
     Note: if you want to discard the  latest 3 commits than use HEAD^^^ (or)  HEAD~3 
     ~~~
